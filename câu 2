@@ -1,0 +1,24 @@
+#include <iosstream>
+using namespace std;
+// Hàm tính tổng các chữ số của một số nguyên
+int tinh_tong_chu _so(int n){
+   // Khởi tạo biến tổng
+int tong = 0;
+    // Duyệt qua từng chữ số trong số nguyên n 
+  while (n>0) {
+  // Lấy chữ số cuối cùng của n và cộng vào tổng
+  tong+= n % 10;
+   // Loại bỏ chữ số cuối cùng của n
+   n/= 10;
+  }
+
+return tong;
+}
+int main(){ 
+  // Nhập số nguyên từ bàn phím
+    cout<<" Nhập một số nguyên dương:";
+cin>> n;
+  // gọi hàm để tính tổng các chữ số và in kết quả
+  cout<<" Tổng các chữ số của số nguyên" << n<< "là :"<< tinh_tong_chu_so(n)<< endl;
+return 0;
+}
